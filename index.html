@@ -39,6 +39,16 @@
             font-size: 16px;
             color: white;
         }
+        .header-footnote {
+            background-color: #f8f9fa;
+            border-left: 4px solid #003660;
+            padding: 15px 20px;
+            margin: 20px 30px;
+            font-size: 11pt;
+            line-height: 1.6;
+            color: #000000;
+            font-style: italic;
+        }
         .controls {
             padding: 20px;
             background-color: #CCE2E1;
@@ -138,6 +148,7 @@
         .annual { background-color: #305250; color: white; }
         .triennial { background-color: #441D61; color: white; }
         .quarterly { background-color: #633B00; color: white; }
+        .monthly { background-color: #8B0743; color: white; }
         .description {
             line-height: 1.5;
             color: #000000;
@@ -174,6 +185,9 @@
             <h1>CARE Tools CQI Framework Timeline</h1>
             <p>Community Care Licensing Inspection Process Project - 2026</p>
         </div>
+        <div class="header-footnote">
+            <strong>Please note:</strong> The CARE Tool CQI Framework Timeline is a living document subject to revision as workload priorities and operational conditions evolve. The availability of data underlying each analytical task is contingent upon the completion of inspections by facility type; accordingly, the number of inspections completed within a given period directly governs the feasibility and sequencing of scheduled analyses. As inspection volume accumulates across facility types, the timeline will be updated to reflect current data availability and analytic readiness.
+        </div>
         <div class="controls">
             <button onclick="exportToCSV('new')">Export New Tool Activities</button>
             <button onclick="exportToCSV('ongoing')">Export Ongoing Activities</button>
@@ -188,7 +202,7 @@
                 <table id="newToolTable">
                     <thead>
                         <tr>
-                            <th style="width: 18%;">Timeline</th>
+                            <th style="width: 18%;">Estimated Timeline</th>
                             <th style="width: 28%;">Activity/Task</th>
                             <th style="width: 36%;">Description</th>
                             <th style="width: 18%;">Responsible Party</th>
@@ -196,16 +210,10 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><span class="frequency first-3-months">First 3 Months</span></td>
+                            <td><span class="frequency semi-annual-y1">Semi-Annually (Year 1)</span></td>
                             <td>Initial Feedback Collection</td>
                             <td class="description">Identify duplicative, obsolete, or conflicting regulations/statutes for possible Tool exclusion</td>
                             <td class="responsible">Program Policy, Project Management, QMB</td>
-                        </tr>
-                        <tr>
-                            <td><span class="frequency first-3-months">First 3 Months</span></td>
-                            <td>Monthly Management Reporting</td>
-                            <td class="description">Report inspection data at Division, Program, and regional office levels</td>
-                            <td class="responsible">Quality Management Bureau</td>
                         </tr>
                         <tr>
                             <td><span class="frequency semi-annual-y1">Semi-Annually (Year 1)</span></td>
@@ -275,13 +283,19 @@
                 <table id="ongoingToolTable">
                     <thead>
                         <tr>
-                            <th style="width: 15%;">Frequency</th>
+                            <th style="width: 15%;">Estimated Timeline</th>
                             <th style="width: 30%;">Activity/Task</th>
                             <th style="width: 35%;">Description</th>
                             <th style="width: 20%;">Responsible Party</th>
                         </tr>
                     </thead>
                     <tbody>
+                        <tr>
+                            <td><span class="frequency monthly">Monthly</span></td>
+                            <td>Monthly Management Reporting</td>
+                            <td class="description">Report inspection data at Division, Program, and regional office levels</td>
+                            <td class="responsible">Quality Management Bureau</td>
+                        </tr>
                         <tr>
                             <td><span class="frequency quarterly">Quarterly</span></td>
                             <td>Program Coordination Meeting</td>
