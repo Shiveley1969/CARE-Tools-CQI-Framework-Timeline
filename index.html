@@ -14,7 +14,7 @@
             color: #000000;
         }
         .container {
-            max-width: 1400px;
+            max-width: 1600px;
             margin: 0 auto;
             background-color: white;
             border-radius: 10px;
@@ -27,18 +27,8 @@
             padding: 20px;
             text-align: center;
         }
-        .header h1 {
-            margin: 0;
-            font-size: 28px;
-            font-weight: 600;
-            color: white;
-        }
-        .header p {
-            margin: 10px 0 0 0;
-            opacity: 0.9;
-            font-size: 16px;
-            color: white;
-        }
+        .header h1 { margin: 0; font-size: 28px; font-weight: 600; color: white; }
+        .header p { margin: 10px 0 0 0; opacity: 0.9; font-size: 16px; color: white; }
         .header-footnote {
             background-color: #f8f9fa;
             border-left: 4px solid #003660;
@@ -68,13 +58,8 @@
             font-weight: 500;
             transition: all 0.3s ease;
         }
-        .controls button:hover {
-            background-color: #002447;
-            transform: translateY(-1px);
-        }
-        .section {
-            margin: 30px;
-        }
+        .controls button:hover { background-color: #002447; transform: translateY(-1px); }
+        .section { margin: 30px; }
         .section-header {
             background: #305250;
             color: white;
@@ -82,26 +67,10 @@
             border-radius: 8px;
             margin-bottom: 20px;
         }
-        .section-header.ongoing {
-            background: #003660;
-            color: white;
-        }
-        .section-header h2 {
-            margin: 0;
-            font-size: 22px;
-            font-weight: 600;
-            color: white;
-        }
-        .section-header p {
-            margin: 5px 0 0 0;
-            opacity: 0.9;
-            font-size: 14px;
-            color: white;
-        }
-        .table-container {
-            overflow-x: auto;
-            margin-bottom: 20px;
-        }
+        .section-header.ongoing { background: #003660; color: white; }
+        .section-header h2 { margin: 0; font-size: 22px; font-weight: 600; color: white; }
+        .section-header p { margin: 5px 0 0 0; opacity: 0.9; font-size: 14px; color: white; }
+        .table-container { overflow-x: auto; margin-bottom: 20px; }
         table {
             width: 100%;
             border-collapse: collapse;
@@ -128,9 +97,7 @@
             font-size: 12pt;
             color: #000000;
         }
-        tr:hover td {
-            background-color: #CCE2E1;
-        }
+        tr:hover td { background-color: #CCE2E1; }
         .frequency {
             font-weight: 600;
             padding: 4px 8px;
@@ -144,19 +111,15 @@
         }
         .first-3-months { background-color: #8B0743; color: white; }
         .semi-annual-y1 { background-color: #ad9013; color: white; }
+        .semi-annual { background-color: #ad9013; color: white; }
         .after-1-year { background-color: #003660; color: white; }
         .annual { background-color: #305250; color: white; }
         .triennial { background-color: #441D61; color: white; }
         .quarterly { background-color: #633B00; color: white; }
         .monthly { background-color: #8B0743; color: white; }
-        .description {
-            line-height: 1.5;
-            color: #000000;
-        }
-        .responsible {
-            font-weight: 500;
-            color: #003660;
-        }
+        .description { line-height: 1.5; color: #000000; }
+        .responsible { font-weight: 500; color: #003660; }
+        .dates { color: #595959; font-style: italic; }
         .timeline-note {
             background-color: #fffaed;
             border: 2px solid #ad9013;
@@ -283,10 +246,12 @@
                 <table id="ongoingToolTable">
                     <thead>
                         <tr>
-                            <th style="width: 15%;">Estimated Timeline</th>
-                            <th style="width: 30%;">Activity/Task</th>
-                            <th style="width: 35%;">Description</th>
-                            <th style="width: 20%;">Responsible Party</th>
+                            <th style="width: 11%;">Estimated Timeline</th>
+                            <th style="width: 18%;">Activity/Task</th>
+                            <th style="width: 24%;">Description</th>
+                            <th style="width: 14%;">Responsible Party</th>
+                            <th style="width: 16%;">Estimated Start Date</th>
+                            <th style="width: 16%;">Estimated End Date</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -295,66 +260,88 @@
                             <td>Monthly Management Reporting</td>
                             <td class="description">Report inspection data at Division, Program, and regional office levels</td>
                             <td class="responsible">Quality Management Bureau</td>
+                            <td class="dates">N/A</td>
+                            <td class="dates">N/A</td>
                         </tr>
                         <tr>
                             <td><span class="frequency quarterly">Quarterly</span></td>
                             <td>Program Coordination Meeting</td>
                             <td class="description">Review data analysis, identify barriers, evaluate legislation, update work plans</td>
                             <td class="responsible">Program Coordination Workgroup</td>
+                            <td class="dates">April</td>
+                            <td class="dates">October</td>
                         </tr>
                         <tr>
-                            <td><span class="frequency annual">Annual</span></td>
+                            <td><span class="frequency semi-annual">Semi-Annual</span></td>
                             <td>Standard Tool Updates</td>
                             <td class="description">Update tools for new requirements and emerging health/safety concerns</td>
                             <td class="responsible">Program Coordination Workgroup</td>
+                            <td class="dates">As needed (as legislative changes/additions occur)</td>
+                            <td class="dates">N/A</td>
                         </tr>
                         <tr>
                             <td><span class="frequency annual">Annual</span></td>
                             <td>Comprehensive Data Analysis</td>
-                            <td class="description">Review citations, advisory notes, manual citations, domain analysis, interview responses, deficiency distribution, and survey data</td>
+                            <td class="description">Review citations, advisory notes, manual citations, and citation domain analysis</td>
                             <td class="responsible">Quality Management Bureau, RADD</td>
+                            <td class="dates">January</td>
+                            <td class="dates">March</td>
                         </tr>
                         <tr>
                             <td><span class="frequency annual">Annual</span></td>
                             <td>Violation Consistency Analysis</td>
                             <td class="description">Identify citation and advisory note inconsistencies across inspections; determine if due to case differences or inconsistent practices</td>
                             <td class="responsible">Quality Management Bureau</td>
+                            <td class="dates">March</td>
+                            <td class="dates">June</td>
                         </tr>
                         <tr>
                             <td><span class="frequency annual">Annual</span></td>
                             <td>LPA &amp; Licensee Surveys</td>
                             <td class="description">Conduct post-inspection surveys on CARE Tools efficiency and user experience</td>
                             <td class="responsible">Quality Management Bureau</td>
+                            <td class="dates">July</td>
+                            <td class="dates">December</td>
                         </tr>
                         <tr>
                             <td><span class="frequency triennial">Triennial</span></td>
                             <td>Comprehensive CQI Review</td>
-                            <td class="description">Re-evaluate triggers, correlations, Tool content, and training based on data analysis</td>
-                            <td class="responsible">Quality Management Bureau, RADD, SMEs</td>
+                            <td class="description">Re-evaluate triggers and correlations</td>
+                            <td class="responsible">Quality Management Bureau, RADD</td>
+                            <td class="dates">Late 2027 - Launch of FMS</td>
+                            <td class="dates">To be determined</td>
                         </tr>
                         <tr>
                             <td><span class="frequency triennial">Triennial</span></td>
                             <td>New Requirements Review (3-Year)</td>
                             <td class="description">Review citation trends for all requirements added in prior three years; determine Standard versus Domain Focused Tool placement</td>
                             <td class="responsible">Quality Management Bureau, SMEs</td>
+                            <td class="dates">One year post complete FMS launch</td>
+                            <td class="dates">To be determined</td>
                         </tr>
                         <tr>
                             <td><span class="frequency triennial">Triennial</span></td>
                             <td>Inter-Rater Reliability Studies</td>
                             <td class="description">Identify domains and requirements with low inter-rater agreement using concurrent shadow inspections</td>
                             <td class="responsible">Quality Management Bureau, Field Staff</td>
+                            <td class="dates">One year post complete FMS launch</td>
+                            <td class="dates">To be determined</td>
                         </tr>
                         <tr>
                             <td><span class="frequency triennial">Triennial</span></td>
                             <td>Trend Analysis</td>
                             <td class="description">Examine citation/advisory trends, domain triggers, N/A usage, and interview responses</td>
                             <td class="responsible">Quality Management Bureau, RADD</td>
+                            <td class="dates">One year post complete FMS launch</td>
+                            <td class="dates">To be determined</td>
                         </tr>
                         <tr>
                             <td><span class="frequency triennial">Triennial</span></td>
                             <td>SME Workgroup Evaluations</td>
-                            <td class="description">Evaluate tool organization and content; conduct efficiency assessment; recommend improvements</td>
+                            <td class="description">Evaluate Tool content, organization, and efficiency; recommend improvements</td>
                             <td class="responsible">Subject Matter Experts, Program Staff</td>
+                            <td class="dates">One year post complete FMS launch</td>
+                            <td class="dates">To be determined</td>
                         </tr>
                     </tbody>
                 </table>
@@ -380,26 +367,17 @@
             }
             var csv = [];
             tables.forEach(function(table, index) {
-                if (index > 0) {
-                    csv.push('');
-                    csv.push(''); 
-                }
+                if (index > 0) { csv.push(''); csv.push(''); }
                 if (type === 'all') {
-                    if (index === 0) {
-                        csv.push('NEW CARE TOOL DEVELOPMENT & INITIAL IMPLEMENTATION');
-                    } else {
-                        csv.push('ONGOING CARE TOOL MAINTENANCE & CQI');
-                    }
+                    csv.push(index === 0 ? 'NEW CARE TOOL DEVELOPMENT & INITIAL IMPLEMENTATION' : 'ONGOING CARE TOOL MAINTENANCE & CQI');
                     csv.push('');
                 }
                 var rows = table.querySelectorAll('tr');
                 var headers = Array.from(rows[0].querySelectorAll('th')).map(function(th) { return th.textContent.trim(); });
                 csv.push(headers.join(','));
                 for (var i = 1; i < rows.length; i++) {
-                    var row = rows[i];
-                    var cols = Array.from(row.querySelectorAll('td')).map(function(td) {
-                        var text = td.textContent.trim();
-                        text = text.replace(/\s+/g, ' ').replace(/"/g, '""');
+                    var cols = Array.from(rows[i].querySelectorAll('td')).map(function(td) {
+                        var text = td.textContent.trim().replace(/\s+/g, ' ').replace(/"/g, '""');
                         return '"' + text + '"';
                     });
                     csv.push(cols.join(','));
