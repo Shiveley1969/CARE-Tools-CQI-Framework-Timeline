@@ -70,6 +70,7 @@
         .section-header.ongoing { background: #003660; color: white; }
         .section-header h2 { margin: 0; font-size: 22px; font-weight: 600; color: white; }
         .section-header p { margin: 5px 0 0 0; opacity: 0.9; font-size: 14px; color: white; }
+        .section-header .section-note { margin: 8px 0 0 0; opacity: 0.9; font-size: 13px; color: white; font-style: italic; }
         .table-container { overflow-x: auto; margin-bottom: 20px; }
         table {
             width: 100%;
@@ -112,11 +113,12 @@
         .first-3-months { background-color: #8B0743; color: white; }
         .semi-annual-y1 { background-color: #ad9013; color: white; }
         .semi-annual { background-color: #ad9013; color: white; }
+        .semi-annually { background-color: #633B00; color: white; }
+        .as-needed { background-color: #595959; color: white; }
         .after-1-year { background-color: #003660; color: white; }
         .annual { background-color: #305250; color: white; }
         .triennial { background-color: #441D61; color: white; }
         .quarterly { background-color: #633B00; color: white; }
-        .biannually { background-color: #633B00; color: white; }
         .monthly { background-color: #8B0743; color: white; }
         .description { line-height: 1.5; color: #000000; }
         .responsible { font-weight: 500; color: #003660; }
@@ -160,7 +162,8 @@
         <div class="section">
             <div class="section-header">
                 <h2>New CARE Tool Development &amp; Initial Implementation</h2>
-                <p>Activities for newly developed tools during rollout and first year</p>
+                <p class="section-note">New CARE Tools follow the implementation timeline before transitioning to ongoing maintenance. The 1-Year Review evaluates newly added requirements individually after first year inclusion.</p>
+                <p>Activities for newly developed tools during rollout and first year:</p>
             </div>
             <div class="table-container">
                 <table id="newToolTable">
@@ -241,7 +244,7 @@
         <div class="section">
             <div class="section-header ongoing">
                 <h2>Ongoing CARE Tool Maintenance &amp; CQI</h2>
-                <p>Continuous quality improvement activities for existing CARE Tools</p>
+                <p>Continuous quality improvement activities for existing CARE Tools:</p>
             </div>
             <div class="table-container">
                 <table id="ongoingToolTable">
@@ -265,7 +268,7 @@
                             <td class="dates">Ongoing</td>
                         </tr>
                         <tr>
-                            <td><span class="frequency biannually">Biannually</span></td>
+                            <td><span class="frequency semi-annually">Semi-annually</span></td>
                             <td>Program Coordination Meeting</td>
                             <td class="description">Review data analysis, identify barriers, evaluate legislation, update work plans</td>
                             <td class="responsible">Program Coordination Workgroup</td>
@@ -273,9 +276,9 @@
                             <td class="dates">Ongoing</td>
                         </tr>
                         <tr>
-                            <td><span class="frequency semi-annual">Semi-Annual</span></td>
+                            <td><span class="frequency as-needed">As Needed</span></td>
                             <td>Standard Tool Updates</td>
-                            <td class="description">Update tools for new requirements and emerging health/safety concerns</td>
+                            <td class="description">Update Tools for newly enacted requirements and emerging health/safety concerns</td>
                             <td class="responsible">Program Coordination Workgroup</td>
                             <td class="dates">Performed as needed (when legislative changes/additions occur)</td>
                             <td class="dates">N/A</td>
@@ -349,7 +352,7 @@
             </div>
         </div>
         <div class="timeline-note">
-            <strong>Note:</strong> New CARE Tools follow the implementation timeline before transitioning to ongoing maintenance. The 1-Year Review evaluates newly added requirements individually after first year inclusion, while the 3-Year Review examines all requirements added during the prior three years as part of comprehensive triennial CQI.
+            <strong>Note:</strong> The 3-Year Review examines all requirements added during the prior three years as part of comprehensive triennial CQI.
         </div>
     </div>
     <script>
