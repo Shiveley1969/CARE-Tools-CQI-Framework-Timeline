@@ -26,7 +26,6 @@
         td { padding: 12px; border-bottom: 1px solid #e9ecef; vertical-align: top; text-align: left; font-size: 12pt; color: #000000; }
         tr:hover td { background-color: #CCE2E1; }
         .frequency { font-weight: 600; padding: 4px 8px; border-radius: 4px; font-size: 11pt; text-align: center; min-width: 120px; display: inline-block; vertical-align: top; color: white; }
-        .first-3-months { background-color: #8B0743; color: white; }
         .semi-annual-y1 { background-color: #ad9013; color: white; }
         .semi-annually { background-color: #633B00; color: white; }
         .as-needed { background-color: #595959; color: white; }
@@ -52,9 +51,9 @@
             <strong>Please note:</strong> The CARE Tool CQI Framework Timeline is a living document subject to revision as workload priorities and operational conditions evolve. The availability of data underlying each analytical task is contingent upon the completion of inspections by facility type; accordingly, the number of inspections completed within a given period directly governs the feasibility and sequencing of scheduled analyses. As inspection volume accumulates across facility types, the timeline will be updated to reflect current data availability and analytic readiness.
         </div>
         <div class="controls">
-            <button onclick="exportToCSV('new')">Export New Tool Activities</button>
-            <button onclick="exportToCSV('ongoing')">Export Ongoing Activities</button>
-            <button onclick="exportToCSV('all')">Export Complete Timeline</button>
+            <button onclick="exportToXLSX('new')">Export New Tool Activities</button>
+            <button onclick="exportToXLSX('ongoing')">Export Ongoing Activities</button>
+            <button onclick="exportToXLSX('all')">Export Complete Timeline</button>
         </div>
         <div class="section">
             <div class="section-header">
@@ -73,66 +72,16 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td><span class="frequency semi-annual-y1">Semi-Annually (Year 1)</span></td>
-                            <td>Initial Feedback Collection</td>
-                            <td class="description">Identify duplicative, obsolete, or conflicting regulations/statutes for possible Tool exclusion</td>
-                            <td class="responsible">Program Policy, Project Management, QMB</td>
-                        </tr>
-                        <tr>
-                            <td><span class="frequency semi-annual-y1">Semi-Annually (Year 1)</span></td>
-                            <td>Citation Frequency Analysis</td>
-                            <td class="description">Review citation types and advisory notes frequency with monthly trends</td>
-                            <td class="responsible">Quality Management Bureau, RADD</td>
-                        </tr>
-                        <tr>
-                            <td><span class="frequency semi-annual-y1">Semi-Annually (Year 1)</span></td>
-                            <td>Manual Citation Review</td>
-                            <td class="description">Review manually cited requirements to determine Standard Tool additions</td>
-                            <td class="responsible">Quality Management Bureau</td>
-                        </tr>
-                        <tr>
-                            <td><span class="frequency semi-annual-y1">Semi-Annually (Year 1)</span></td>
-                            <td>N/A Response Analysis</td>
-                            <td class="description">Examine N/A response frequency by month to identify gateway question needs</td>
-                            <td class="responsible">Quality Management Bureau</td>
-                        </tr>
-                        <tr>
-                            <td><span class="frequency semi-annual-y1">Semi-Annually (Year 1)</span></td>
-                            <td>PCA Confirmatory Analysis</td>
-                            <td class="description">Conduct Principal Components Analysis to validate domain trigger rules</td>
-                            <td class="responsible">RADD, Quality Management Bureau</td>
-                        </tr>
-                        <tr>
-                            <td><span class="frequency semi-annual-y1">Semi-Annually (Year 1)</span></td>
-                            <td>Citation Consistency Review</td>
-                            <td class="description">Examine citation and advisory note consistency across inspections</td>
-                            <td class="responsible">Quality Management Bureau</td>
-                        </tr>
-                        <tr>
-                            <td><span class="frequency after-1-year">After First Year</span></td>
-                            <td>New Requirements Review (1-Year)</td>
-                            <td class="description">Review citation frequency for newly added requirements; determine Standard Tool, Domain Focused Tool, or removal based on frequency and SME criticality ratings</td>
-                            <td class="responsible">Quality Management Bureau, SMEs</td>
-                        </tr>
-                        <tr>
-                            <td><span class="frequency after-1-year">After First Year</span></td>
-                            <td>Gateway Question Development</td>
-                            <td class="description">Determine gateway question additions/modifications based on N/A trends to improve inspection efficiency</td>
-                            <td class="responsible">Quality Management Bureau, SMEs</td>
-                        </tr>
-                        <tr>
-                            <td><span class="frequency after-1-year">After First Year</span></td>
-                            <td>Tool Content Validation</td>
-                            <td class="description">Validate tool requirements using citation frequency data and SME criticality ratings</td>
-                            <td class="responsible">Quality Management Bureau, SMEs</td>
-                        </tr>
-                        <tr>
-                            <td><span class="frequency after-1-year">After First Year</span></td>
-                            <td>Initial LPA &amp; Licensee Surveys</td>
-                            <td class="description">Conduct post-inspection surveys to assess initial CARE Tool user experience</td>
-                            <td class="responsible">Quality Management Bureau</td>
-                        </tr>
+                        <tr><td><span class="frequency semi-annual-y1">Semi-Annually (Year 1)</span></td><td>Initial Feedback Collection</td><td class="description">Identify duplicative, obsolete, or conflicting regulations/statutes for possible Tool exclusion</td><td class="responsible">Program Policy, Project Management, QMB</td></tr>
+                        <tr><td><span class="frequency semi-annual-y1">Semi-Annually (Year 1)</span></td><td>Citation Frequency Analysis</td><td class="description">Review citation types and advisory notes frequency with monthly trends</td><td class="responsible">Quality Management Bureau, RADD</td></tr>
+                        <tr><td><span class="frequency semi-annual-y1">Semi-Annually (Year 1)</span></td><td>Manual Citation Review</td><td class="description">Review manually cited requirements to determine Standard Tool additions</td><td class="responsible">Quality Management Bureau</td></tr>
+                        <tr><td><span class="frequency semi-annual-y1">Semi-Annually (Year 1)</span></td><td>N/A Response Analysis</td><td class="description">Examine N/A response frequency by month to identify gateway question needs</td><td class="responsible">Quality Management Bureau</td></tr>
+                        <tr><td><span class="frequency semi-annual-y1">Semi-Annually (Year 1)</span></td><td>PCA Confirmatory Analysis</td><td class="description">Conduct Principal Components Analysis to validate domain trigger rules</td><td class="responsible">RADD, Quality Management Bureau</td></tr>
+                        <tr><td><span class="frequency semi-annual-y1">Semi-Annually (Year 1)</span></td><td>Citation Consistency Review</td><td class="description">Examine citation and advisory note consistency across inspections</td><td class="responsible">Quality Management Bureau</td></tr>
+                        <tr><td><span class="frequency after-1-year">After First Year</span></td><td>New Requirements Review (1-Year)</td><td class="description">Review citation frequency for newly added requirements; determine Standard Tool, Domain Focused Tool, or removal based on frequency and SME criticality ratings</td><td class="responsible">Quality Management Bureau, SMEs</td></tr>
+                        <tr><td><span class="frequency after-1-year">After First Year</span></td><td>Gateway Question Development</td><td class="description">Determine gateway question additions/modifications based on N/A trends to improve inspection efficiency</td><td class="responsible">Quality Management Bureau, SMEs</td></tr>
+                        <tr><td><span class="frequency after-1-year">After First Year</span></td><td>Tool Content Validation</td><td class="description">Validate tool requirements using citation frequency data and SME criticality ratings</td><td class="responsible">Quality Management Bureau, SMEs</td></tr>
+                        <tr><td><span class="frequency after-1-year">After First Year</span></td><td>Initial LPA &amp; Licensee Surveys</td><td class="description">Conduct post-inspection surveys to assess initial CARE Tool user experience</td><td class="responsible">Quality Management Bureau</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -156,94 +105,17 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td><span class="frequency monthly">Monthly</span></td>
-                            <td>Monthly Management Reporting</td>
-                            <td class="description">Report inspection data at Division, Program, and regional office levels</td>
-                            <td class="responsible">Quality Management Bureau</td>
-                            <td class="dates">Ongoing</td>
-                            <td class="dates">Ongoing</td>
-                        </tr>
-                        <tr>
-                            <td><span class="frequency semi-annually">Semi-annually</span></td>
-                            <td>Program Coordination Meeting</td>
-                            <td class="description">Review data analysis, identify barriers, evaluate legislation, update work plans</td>
-                            <td class="responsible">Program Coordination Workgroup</td>
-                            <td class="dates">April &amp; October</td>
-                            <td class="dates">Ongoing</td>
-                        </tr>
-                        <tr>
-                            <td><span class="frequency as-needed">As Needed</span></td>
-                            <td>Standard Tool Updates</td>
-                            <td class="description">Update Tools for newly enacted requirements and emerging health/safety concerns</td>
-                            <td class="responsible">Program Coordination Workgroup</td>
-                            <td class="dates">Performed as needed (when legislative changes/additions occur)</td>
-                            <td class="dates">N/A</td>
-                        </tr>
-                        <tr>
-                            <td><span class="frequency annual">Annual</span></td>
-                            <td>Comprehensive Data Analysis</td>
-                            <td class="description">Review citations, advisory notes, manual citations, and citation domain analysis</td>
-                            <td class="responsible">Quality Management Bureau, RADD</td>
-                            <td class="dates">January</td>
-                            <td class="dates">March</td>
-                        </tr>
-                        <tr>
-                            <td><span class="frequency annual">Annual</span></td>
-                            <td>Violation Consistency Analysis</td>
-                            <td class="description">Identify citation and advisory note inconsistencies across inspections; determine if due to case differences or inconsistent practices</td>
-                            <td class="responsible">Quality Management Bureau</td>
-                            <td class="dates">March</td>
-                            <td class="dates">June</td>
-                        </tr>
-                        <tr>
-                            <td><span class="frequency annual">Annual</span></td>
-                            <td>LPA &amp; Licensee Surveys</td>
-                            <td class="description">Conduct post-inspection surveys on CARE Tools efficiency and user experience</td>
-                            <td class="responsible">Quality Management Bureau</td>
-                            <td class="dates">July</td>
-                            <td class="dates">December</td>
-                        </tr>
-                        <tr>
-                            <td><span class="frequency triennial">Triennial</span></td>
-                            <td>Comprehensive CQI Review</td>
-                            <td class="description">Re-evaluate triggers and correlations</td>
-                            <td class="responsible">Quality Management Bureau, RADD</td>
-                            <td class="dates">Late 2027 - Launch of FMS</td>
-                            <td class="dates">To be determined</td>
-                        </tr>
-                        <tr>
-                            <td><span class="frequency triennial">Triennial</span></td>
-                            <td>New Requirements Review (3-Year)</td>
-                            <td class="description">Review citation trends for all requirements added in prior three years; determine Standard versus Domain Focused Tool placement</td>
-                            <td class="responsible">Quality Management Bureau, SMEs</td>
-                            <td class="dates">One year post complete FMS launch</td>
-                            <td class="dates">To be determined</td>
-                        </tr>
-                        <tr>
-                            <td><span class="frequency triennial">Triennial</span></td>
-                            <td>Inter-Rater Reliability Studies</td>
-                            <td class="description">Identify domains and requirements with low inter-rater agreement using concurrent shadow inspections</td>
-                            <td class="responsible">Quality Management Bureau, Field Staff</td>
-                            <td class="dates">One year post complete FMS launch</td>
-                            <td class="dates">To be determined</td>
-                        </tr>
-                        <tr>
-                            <td><span class="frequency triennial">Triennial</span></td>
-                            <td>Trend Analysis</td>
-                            <td class="description">Examine citation/advisory trends, domain triggers, N/A usage, and interview responses</td>
-                            <td class="responsible">Quality Management Bureau, RADD</td>
-                            <td class="dates">One year post complete FMS launch</td>
-                            <td class="dates">To be determined</td>
-                        </tr>
-                        <tr>
-                            <td><span class="frequency triennial">Triennial</span></td>
-                            <td>SME Workgroup Evaluations</td>
-                            <td class="description">Evaluate Tool content, organization, and efficiency; recommend improvements</td>
-                            <td class="responsible">Subject Matter Experts, Program Staff</td>
-                            <td class="dates">One year post complete FMS launch</td>
-                            <td class="dates">To be determined</td>
-                        </tr>
+                        <tr><td><span class="frequency monthly">Monthly</span></td><td>Monthly Management Reporting</td><td class="description">Report inspection data at Division, Program, and regional office levels</td><td class="responsible">Quality Management Bureau</td><td class="dates">Ongoing</td><td class="dates">Ongoing</td></tr>
+                        <tr><td><span class="frequency semi-annually">Semi-annually</span></td><td>Program Coordination Meeting</td><td class="description">Review data analysis, identify barriers, evaluate legislation, update work plans</td><td class="responsible">Program Coordination Workgroup</td><td class="dates">April &amp; October</td><td class="dates">Ongoing</td></tr>
+                        <tr><td><span class="frequency as-needed">As Needed</span></td><td>Standard Tool Updates</td><td class="description">Update Tools for newly enacted requirements and emerging health/safety concerns</td><td class="responsible">Program Coordination Workgroup</td><td class="dates">Performed as needed (when legislative changes/additions occur)</td><td class="dates">N/A</td></tr>
+                        <tr><td><span class="frequency annual">Annual</span></td><td>Comprehensive Data Analysis</td><td class="description">Review citations, advisory notes, manual citations, and citation domain analysis</td><td class="responsible">Quality Management Bureau, RADD</td><td class="dates">January</td><td class="dates">March</td></tr>
+                        <tr><td><span class="frequency annual">Annual</span></td><td>Violation Consistency Analysis</td><td class="description">Identify citation and advisory note inconsistencies across inspections; determine if due to case differences or inconsistent practices</td><td class="responsible">Quality Management Bureau</td><td class="dates">March</td><td class="dates">June</td></tr>
+                        <tr><td><span class="frequency annual">Annual</span></td><td>LPA &amp; Licensee Surveys</td><td class="description">Conduct post-inspection surveys on CARE Tools efficiency and user experience</td><td class="responsible">Quality Management Bureau</td><td class="dates">July</td><td class="dates">December</td></tr>
+                        <tr><td><span class="frequency triennial">Triennial</span></td><td>Comprehensive CQI Review</td><td class="description">Re-evaluate triggers and correlations</td><td class="responsible">Quality Management Bureau, RADD</td><td class="dates">Late 2027 - Launch of FMS</td><td class="dates">To be determined</td></tr>
+                        <tr><td><span class="frequency triennial">Triennial</span></td><td>New Requirements Review (3-Year)</td><td class="description">Review citation trends for all requirements added in prior three years; determine Standard versus Domain Focused Tool placement</td><td class="responsible">Quality Management Bureau, SMEs</td><td class="dates">One year post complete FMS launch</td><td class="dates">To be determined</td></tr>
+                        <tr><td><span class="frequency triennial">Triennial</span></td><td>Inter-Rater Reliability Studies</td><td class="description">Identify domains and requirements with low inter-rater agreement using concurrent shadow inspections</td><td class="responsible">Quality Management Bureau, Field Staff</td><td class="dates">One year post complete FMS launch</td><td class="dates">To be determined</td></tr>
+                        <tr><td><span class="frequency triennial">Triennial</span></td><td>Trend Analysis</td><td class="description">Examine citation/advisory trends, domain triggers, N/A usage, and interview responses</td><td class="responsible">Quality Management Bureau, RADD</td><td class="dates">One year post complete FMS launch</td><td class="dates">To be determined</td></tr>
+                        <tr><td><span class="frequency triennial">Triennial</span></td><td>SME Workgroup Evaluations</td><td class="description">Evaluate Tool content, organization, and efficiency; recommend improvements</td><td class="responsible">Subject Matter Experts, Program Staff</td><td class="dates">One year post complete FMS launch</td><td class="dates">To be determined</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -252,30 +124,110 @@
             <strong>Note:</strong> The 3-Year Review examines all requirements added during the prior three years as part of comprehensive triennial CQI.
         </div>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.3.0/exceljs.min.js"></script>
     <script>
-        function exportToCSV(type) {
-            var tables = [], filename = '';
-            if (type === 'new') { tables = [document.getElementById('newToolTable')]; filename = 'New_CARE_Tool_Implementation_Activities.csv'; }
-            else if (type === 'ongoing') { tables = [document.getElementById('ongoingToolTable')]; filename = 'Ongoing_CARE_Tool_Maintenance_Activities.csv'; }
-            else { tables = [document.getElementById('newToolTable'), document.getElementById('ongoingToolTable')]; filename = 'Complete_CARE_Tools_CQI_Timeline.csv'; }
-            var csv = [];
-            tables.forEach(function(table, index) {
-                if (index > 0) { csv.push(''); csv.push(''); }
-                if (type === 'all') { csv.push(index === 0 ? 'NEW CARE TOOL DEVELOPMENT & INITIAL IMPLEMENTATION' : 'ONGOING CARE TOOL MAINTENANCE & CQI'); csv.push(''); }
+        function getFrequencyColor(text) {
+            text = text.trim();
+            if (text === 'Monthly') return 'FF8B0743';
+            if (text === 'Semi-annually') return 'FF633B00';
+            if (text === 'As Needed') return 'FF595959';
+            if (text === 'Annual') return 'FF305250';
+            if (text === 'Triennial') return 'FF441D61';
+            if (text.indexOf('Semi-Annually') === 0) return 'FFAD9013';
+            if (text === 'After First Year') return 'FF003660';
+            return 'FF595959';
+        }
+
+        async function exportToXLSX(type) {
+            if (typeof ExcelJS === 'undefined') {
+                alert('Excel export library not loaded. Please check your internet connection and try again.');
+                return;
+            }
+
+            var workbook = new ExcelJS.Workbook();
+            workbook.creator = 'QMB CCLD';
+            workbook.created = new Date();
+
+            var border = {
+                top:    { style: 'thin', color: { argb: 'FFD0D0D0' } },
+                left:   { style: 'thin', color: { argb: 'FFD0D0D0' } },
+                bottom: { style: 'thin', color: { argb: 'FFD0D0D0' } },
+                right:  { style: 'thin', color: { argb: 'FFD0D0D0' } }
+            };
+
+            function addSheet(sheetName, tableId) {
+                var ws = workbook.addWorksheet(sheetName);
+                var table = document.getElementById(tableId);
                 var rows = table.querySelectorAll('tr');
-                csv.push(Array.from(rows[0].querySelectorAll('th')).map(function(th) { return th.textContent.trim(); }).join(','));
+                var headers = Array.from(rows[0].querySelectorAll('th')).map(function(th) { return th.textContent.trim(); });
+                var numCols = headers.length;
+
+                var colWidths = tableId === 'newToolTable'
+                    ? [22, 28, 45, 28]
+                    : [18, 25, 38, 25, 24, 24];
+                ws.columns = colWidths.map(function(w) { return { width: w }; });
+
+                // Header row
+                var headerRow = ws.addRow(headers);
+                headerRow.height = 30;
+                headerRow.eachCell(function(cell) {
+                    cell.fill   = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FF595959' } };
+                    cell.font   = { bold: true, color: { argb: 'FFFFFFFF' }, size: 11, name: 'Arial' };
+                    cell.border = border;
+                    cell.alignment = { wrapText: true, vertical: 'middle', horizontal: 'left' };
+                });
+
+                // Freeze header row
+                ws.views = [{ state: 'frozen', ySplit: 1 }];
+
+                // Data rows
                 for (var i = 1; i < rows.length; i++) {
-                    csv.push(Array.from(rows[i].querySelectorAll('td')).map(function(td) { return '"' + td.textContent.trim().replace(/\s+/g,' ').replace(/"/g,'""') + '"'; }).join(','));
+                    var tds = rows[i].querySelectorAll('td');
+                    var vals = Array.from(tds).map(function(td) {
+                        return td.textContent.trim().replace(/\s+/g, ' ');
+                    });
+                    var dataRow = ws.addRow(vals);
+                    dataRow.height = 50;
+
+                    for (var j = 1; j <= numCols; j++) {
+                        var cell = dataRow.getCell(j);
+                        cell.border = border;
+                        cell.alignment = { wrapText: true, vertical: 'top', horizontal: 'left' };
+
+                        if (j === 1) {
+                            var color = getFrequencyColor(vals[0]);
+                            cell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: color } };
+                            cell.font = { bold: true, color: { argb: 'FFFFFFFF' }, size: 10, name: 'Arial' };
+                            cell.alignment = { wrapText: true, vertical: 'top', horizontal: 'center' };
+                        } else if (j === 4) {
+                            cell.font = { color: { argb: 'FF003660' }, size: 10, name: 'Arial' };
+                        } else if (tableId === 'ongoingToolTable' && (j === 5 || j === 6)) {
+                            cell.font = { italic: true, color: { argb: 'FF595959' }, size: 10, name: 'Arial' };
+                        } else {
+                            cell.font = { color: { argb: 'FF000000' }, size: 10, name: 'Arial' };
+                        }
+                    }
                 }
-            });
-            var blob = new Blob([csv.join('\n')], {type:'text/csv;charset=utf-8;'});
-            var link = document.createElement('a');
-            link.setAttribute('href', URL.createObjectURL(blob));
-            link.setAttribute('download', filename);
-            link.style.visibility = 'hidden';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
+            }
+
+            if (type === 'new' || type === 'all') addSheet('New Tool Implementation', 'newToolTable');
+            if (type === 'ongoing' || type === 'all') addSheet('Ongoing Maintenance CQI', 'ongoingToolTable');
+
+            var filename = type === 'new'     ? 'New_CARE_Tool_Implementation_Activities.xlsx'
+                         : type === 'ongoing' ? 'Ongoing_CARE_Tool_Maintenance_Activities.xlsx'
+                         :                      'Complete_CARE_Tools_CQI_Timeline.xlsx';
+
+            var buffer = await workbook.xlsx.writeBuffer();
+            var blob = new Blob([buffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+            var url = URL.createObjectURL(blob);
+            var a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
         }
     </script>
 </body>
